@@ -249,7 +249,7 @@ export default function PostCard({ post, isPostDetails = false, className }) {
             className={`cursor-pointer ${isLiked ? "text-blue-500" : "text-gray-600"} flex gap-1.5 justify-center items-center`}
           >
             <AiFillLike />
-            {isLiked ? "Liked" : "Like"}
+            {isLiked ? "Liked " : "Like "}
             {post.likesCount > 0 ? post.likesCount : null}
           </div>
           <Link to={`/postdetails/${id}`}>
