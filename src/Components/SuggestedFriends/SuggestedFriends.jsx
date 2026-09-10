@@ -52,7 +52,7 @@ export default function SuggestedFriends() {
   );
 
   return (
-    <div className="rounded-2xl h-fit md:sticky md:top-[84px] md:block border border-slate-200 bg-gray-100 p-3 shadow-sm space-y-1 md:w-1/4">
+    <div className="hidden rounded-2xl h-fit md:sticky md:top-[84px] md:block border border-slate-200 bg-gray-100 p-3 shadow-sm space-y-1 md:w-1/4">
       {/* Header */}
       <div className="mb-3 flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">

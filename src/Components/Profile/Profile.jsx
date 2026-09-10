@@ -35,8 +35,6 @@ export default function Profile() {
     queryFn: myProfile,
   });
 
-  console.log("ffffffffffffffffff", data?.data.data.user);
-
   const handleImage = (e) => {
     e.target.files[0];
     setimageSrc(URL.createObjectURL(e.target.files[0]));
@@ -95,14 +93,14 @@ export default function Profile() {
                   />
                 )}
 
-                <div>
-                  <h2 className="text-2xl font-bold">
+                <div className="w-fit">
+                  <h2 className="text-[14px] wrap-break-word md:text-2xl font-bold">
                     {data?.data.data.user.name}
                   </h2>
-                  <p className="text-gray-500">
+                  <p className="text-[10px] md:text-sm text-gray-500">
                     @{data?.data.data.user.username}
                   </p>
-                  <div className="mt-2 flex items-center gap-1 text-blue-600 text-sm">
+                  <div className="text-[10px] mt-2 flex items-center gap-1 text-blue-600 md:text-sm">
                     <Users size={14} />
                     SocialHub member
                   </div>
@@ -112,26 +110,26 @@ export default function Profile() {
               {/* Stats Counters */}
               <div className="grid w-full grid-cols-3 gap-2 lg:w-[520px]">
                 <div className="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
-                  <p className="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">
+                  <p className="text-[8px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">
                     Followers
                   </p>
-                  <p className="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">
+                  <p className="text-[20px] mt-1 text-2xl font-black text-slate-900 sm:text-3xl">
                     {data?.data.data.user.followersCount}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
-                  <p className="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">
+                  <p className="text-[8px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">
                     Following
                   </p>
-                  <p className="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">
+                  <p className="text-[20px] mt-1 text-2xl font-black text-slate-900 sm:text-3xl">
                     {data?.data.data.user.followingCount}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
-                  <p className="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">
+                  <p className="text-[8px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">
                     Bookmarks
                   </p>
-                  <p className="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">
+                  <p className="text-[20px] mt-1 text-2xl font-black text-slate-900 sm:text-3xl">
                     {data?.data.data.user.bookmarksCount}
                   </p>
                 </div>
