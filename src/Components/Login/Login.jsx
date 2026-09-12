@@ -165,7 +165,7 @@ export default function Login() {
                   )}
                   id="email"
                   className="block py-5 px-0 w-full text-center text-sm placeholder:text-center text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-                  placeholder="ahmedMagdy@gmail.com"
+                  placeholder="Enter Your Email"
                 />
                 <label
                   htmlFor="email"
@@ -195,7 +195,7 @@ export default function Login() {
                   type="password"
                   id="password"
                   className="block text-center placeholder:text-center py-5 px-0 w-full text-sm text-heading bg-transparent appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-                  placeholder="************"
+                  placeholder="Enter Your Password"
                 />
                 <label
                   htmlFor="password"

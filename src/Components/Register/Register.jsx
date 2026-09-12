@@ -29,7 +29,7 @@ const schema = zod
       .string()
       .nonempty("Name is required")
       .min(3, "Min length is 3 chars")
-      .max(30, "Max length is 30 chars"),
+      .max(15, "Max length is 15 chars"),
     email: zod
       .email("Invalid Email")
       .regex(
@@ -190,7 +190,7 @@ export default function Register() {
               type="text"
               id="name"
               className="block text-center py-5 px-0 w-full text-sm text-heading placeholder:text-center bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-              placeholder="Ahmed Magdy Selim"
+              placeholder="Enter Your Name"
             />
             <label
               htmlFor="name"
@@ -210,7 +210,7 @@ export default function Register() {
             )}
               id="email"
               className="block text-center py-5 px-0 w-full text-sm placeholder:text-center text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-              placeholder="ahmedMagdy@gmail.com"
+              placeholder="Enter Your Email"
             />
             <label
               htmlFor="email"
@@ -235,7 +235,7 @@ export default function Register() {
               type="password"
               id="password"
               className="block text-center placeholder:text-center py-5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-              placeholder="************"
+              placeholder="Enter Your Password"
             />
             <label
               htmlFor="password"
@@ -262,7 +262,7 @@ export default function Register() {
             )}
               id="rePassword"
               className="block text-center py-5 px-0 placeholder:text-center w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-              placeholder="************"
+              placeholder="Confirm Your Password"
             />
             <label
               htmlFor="rePassword"

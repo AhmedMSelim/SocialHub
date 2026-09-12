@@ -120,20 +120,20 @@ export default function PostCard({ post, isPostDetails = false, className }) {
       },
     );
   }
-  const { mutate: likeMutate, error: likeError } = useMutation({
-    mutationFn: likePost,
-    onSuccess: () => {
-      query.invalidateQueries({ queryKey: ["getSavedPosts"] });
-      query.invalidateQueries({ queryKey: ["getAllPosts"] });
-      query.invalidateQueries({ queryKey: ["myProfile"] });
-      toast.success(`Liked Post Successfully ✅`, { autoClose: 2000 });
-    },
-    onError: () => {
-      toast.error("Failed to like post. Please try again.", {
-        autoClose: 2000,
-      });
-    },
-  });
+  // const { mutate: likeMutate, error: likeError } = useMutation({
+  //   mutationFn: likePost,
+  //   onSuccess: () => {
+  //     query.invalidateQueries({ queryKey: ["getSavedPosts"] });
+  //     query.invalidateQueries({ queryKey: ["getAllPosts"] });
+  //     query.invalidateQueries({ queryKey: ["myProfile"] });
+  //     toast.success(`Liked Post Successfully ✅`, { autoClose: 2000 });
+  //   },
+  //   onError: () => {
+  //     toast.error("Failed to like post. Please try again.", {
+  //       autoClose: 2000,
+  //     });
+  //   },
+  // });
   return (
     <Card className={className}>
       <div className="flex justify-between">
@@ -245,7 +245,7 @@ export default function PostCard({ post, isPostDetails = false, className }) {
       <Card.Footer>
         <div className="w-full flex px-2 justify-between items-center pt-2 ">
           <div
-            onClick={likeMutate}
+            // onClick={likeMutate}
             className={`cursor-pointer ${isLiked ? "text-blue-500" : "text-gray-600"} flex gap-1.5 justify-center items-center`}
           >
             <AiFillLike />
